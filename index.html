@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio- Julia Bergman</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
+
+
+    <!-- ===== Link Swiper's CSS ===== -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- ===== Link font ===== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <aside class="cabecalho">
+        <div class="menu">
+            <div class="margem-menu">
+
+                <img src="./img/logo.svg" alt="logo de um desenho de coração com olhos" class="logo">
+                <nav>
+                    <a href="#1">Me conheça</a>
+                    <a href="#2">Trabalhos</a>
+                    <a href="#3">Mentorias</a>
+                </nav>
+
+                <div class="redes-sociais">
+                    <a href="#">
+                        <img src="./img/linkedin.png" alt="ícone Linkedin">
+                    </a>
+                    <a href="#">
+                        <img src="./img/github.png" alt="ícone Github">
+                    </a>
+                    <a href="#">
+                        <img src="./img/behance.png" alt="ícone Behance">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <main>
+        <section class="apresentacao" id="1">
+            <div class="quem-sou">
+                <div class="margin">
+                    <h1>Transformo ideias em projetos digitais que se destacam visualmente e proporcionam uma ótima experiência de usuário</h1>
+                    <div class="resumo">
+                        <img src="./img/eu.png" alt="Foto da desenvolvedora Julia Bergman">
+                        <div class="info">
+                            <span>Bem vinda(o)</span>
+                            <p>Desenvolvedora frontend em constante evolução, com experiência em projetos reais. Ideal para criar experiências digitais inovadoras</p>
+                            <div class="btn-quemsou">
+                                <a href="#">Vamos Conversar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trabalhos" id="2">
+            <div class="margin">
+                <h2>Meus Trabalhos</h2>
+                <div class="carousel-container">
+
+                    <div class="carousel">
+                        <div class="card">
+                            <img src="./img/coorganicas.png" alt="logo coorganicas">
+
+                            <div class="cabecalho-card">
+                                <h3>Coorganicas</h3>
+                                <div class="topicos">
+                                    <span class="card-span">React</span>
+                                    <span class="card-span">Figma</span>
+                                </div>
+                                <a href="#">Ver mais</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="./img/coorganicas.png" alt="logo coorganicas">
+
+                            <div class="cabecalho-card">
+                                <h3>Coorganicas</h3>
+                                <div class="topicos">
+                                    <span class="card-span">React</span>
+                                    <span class="card-span">Figma</span>
+                                </div>
+                                <a href="#">Ver mais</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="./img/coorganicas.png" alt="logo coorganicas">
+
+                            <div class="cabecalho-card">
+                                <h3>Coorganicas</h3>
+                                <div class="topicos">
+                                    <span class="card-span">React</span>
+                                    <span class="card-span">Figma</span>
+                                </div>
+                                <a href="#">Ver mais</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="./img/coorganicas.png" alt="logo coorganicas">
+
+                            <div class="cabecalho-card">
+                                <h3>Coorganicas</h3>
+                                <div class="topicos">
+                                    <span class="card-span">React</span>
+                                    <span class="card-span">Figma</span>
+                                </div>
+                                <a href="#">Ver mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-button left">
+                        <img src="./img/1.png" alt="">
+                    </button>
+
+                    <button class="carousel-button right">
+                        <img src="./img/2.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const prevButton = document.querySelector('.carousel-button.left');
+        const nextButton = document.querySelector('.carousel-button.right');
+
+        let currentIndex = 0;
+        const totalImages = carousel.children.length;
+
+        function showImage(index) {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            showImage(currentIndex);
+        }
+
+        nextButton.addEventListener('click', nextImage);
+        prevButton.addEventListener('click', prevImage);
+    </script>
+</body>
+
+</html>
