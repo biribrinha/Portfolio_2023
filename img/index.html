@@ -75,11 +75,12 @@
 
                     <div class="carousel">
 
+                        <label for="carousel2" class="carousel__next carousel__control"></label>
                         <div class="card">
-                            <img src="./img/mobili.png" alt="logo coorganicas">
+                            <img src="./img/coorganicas.png" alt="logo coorganicas">
 
                             <div class="cabecalho-card">
-                                <h3>Mobili</h3>
+                                <h3>Coorganicas</h3>
                                 <div class="topicos">
                                     <span class="card-span">React</span>
                                     <span class="card-span">Figma</span>
@@ -87,7 +88,6 @@
                                 <a href="#">Ver mais</a>
                             </div>
                         </div>
-
 
                         <div class="card">
                             <img src="./img/coorganicas.png" alt="logo coorganicas">
@@ -103,10 +103,10 @@
                         </div>
 
                         <div class="card">
-                            <img src="./img/Aviato.png" alt="logo coorganicas">
+                            <img src="./img/coorganicas.png" alt="logo coorganicas">
 
                             <div class="cabecalho-card">
-                                <h3>E-comerce Aviato</h3>
+                                <h3>Coorganicas</h3>
                                 <div class="topicos">
                                     <span class="card-span">React</span>
                                     <span class="card-span">Figma</span>
@@ -116,10 +116,10 @@
                         </div>
 
                         <div class="card">
-                            <img src="./img/codelandia.png" alt="logo coorganicas">
+                            <img src="./img/coorganicas.png" alt="logo coorganicas">
 
                             <div class="cabecalho-card">
-                                <h3>Desafios Codêlandia</h3>
+                                <h3>Coorganicas</h3>
                                 <div class="topicos">
                                     <span class="card-span">React</span>
                                     <span class="card-span">Figma</span>
@@ -127,89 +127,18 @@
                                 <a href="#">Ver mais</a>
                             </div>
                         </div>
-
-                        <div class="card">
-                            <img src="./img/nuvem.png" alt="logo coorganicas">
-
-                            <div class="cabecalho-card">
-                                <h3>Aprenda na nuvem</h3>
-                                <div class="topicos">
-                                    <span class="card-span">React</span>
-                                    <span class="card-span">Figma</span>
-                                </div>
-                                <a href="#">Ver mais</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <img src="./img/deliverize.png" alt="logo coorganicas">
-
-                            <div class="cabecalho-card">
-                                <h3>Deliverize</h3>
-                                <div class="topicos">
-                                    <span class="card-span">React</span>
-                                    <span class="card-span">Figma</span>
-                                </div>
-                                <a href="#">Ver mais</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <img src="./img/lulu.png" alt="logo coorganicas">
-
-                            <div class="cabecalho-card">
-                                <h3>Sorveteria da lulu</h3>
-                                <div class="topicos">
-                                    <span class="card-span">React</span>
-                                    <span class="card-span">Figma</span>
-                                </div>
-                                <a href="#">Ver mais</a>
-                            </div>
-                        </div>
-
-
-                        <div class="card">
-                            <img src="./img/float.png" alt="logo coorganicas">
-
-                            <div class="cabecalho-card">
-                                <h3>Float Web</h3>
-                                <div class="topicos">
-                                    <span class="card-span">React</span>
-                                    <span class="card-span">Figma</span>
-                                </div>
-                                <a href="#">Ver mais</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <img src="./img/vs.png" alt="logo coorganicas">
-
-                            <div class="cabecalho-card">
-                                <h3>VSConnect</h3>
-                                <div class="topicos">
-                                    <span class="card-span">React</span>
-                                    <span class="card-span">Figma</span>
-                                </div>
-                                <a href="#">Ver mais</a>
-                            </div>
-                        </div>
-
-
                     </div>
-
-
 
                     <button class="carousel-button left">
                         <img src="./img/1.svg" alt="voltar slide">
                     </button>
 
                     <button class="carousel-button right">
-                        <img src="./img/2.svg" alt="prosseguir slide">
+                        <img src="./img/2.png" alt="prosseguir slide">
                     </button>
                 </div>
             </div>
         </section>
-
 
     </main>
 
@@ -224,22 +153,11 @@
 
         function showImage(index) {
             carousel.style.transform = `translateX(-${index * 100}%)`;
-            ocultarBotoes(index);
         }
 
         function nextImage() {
-            if (currentIndex < totalImages - 1) {
-                currentIndex++;
-                showImage(currentIndex);
-            }
-
-            if (currentIndex === totalImages - 1) {
-                nextButton.style.display = 'none';
-            } else {
-                nextButton.style.display = 'block';
-            }
-
-            prevButton.style.display = 'block';
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
         }
 
         function prevImage() {
@@ -247,24 +165,9 @@
             showImage(currentIndex);
         }
 
-        function ocultarBotoes(index) {
-            if (index === 0) {
-                prevButton.style.display = 'none';
-            } else {
-                prevButton.style.display = 'block';
-            }
-
-            if (index === totalImages - 1) {
-                nextButton.style.display = 'none';
-            } else {
-                nextButton.style.display = 'block';
-            }
-        }
-
         nextButton.addEventListener('click', nextImage);
         prevButton.addEventListener('click', prevImage);
-
-        showImage(currentIndex); // Chamando a função inicialmente para exibir corretamente os botões
     </script>
+</body>
 
 </html>

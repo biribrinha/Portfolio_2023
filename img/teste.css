@@ -1,0 +1,15 @@
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.card {
+    flex: 0 0 200px;
+    height: 200px;
+    margin-right: 10px;
+    background-color: lightgray;
+}
+
+#prevBtn {
+    display: none;
+}
