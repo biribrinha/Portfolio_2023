@@ -11,6 +11,10 @@
     font-style: normal;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     /*cores*/
     --cinza: #111111;
@@ -168,11 +172,11 @@ main {
 
 .info p {
     font-style: normal;
-    font-weight: 800;
+    font-weight: 900;
     font-size: 20px;
     line-height: 27px;
     color: var(--branco);
-    font-family: var(--fonte1);
+    font-family: var(--fonte2);
     margin-bottom: 13px;
 }
 
@@ -188,6 +192,12 @@ main {
     border: 1.5px solid #FFFFFF;
     border-radius: 13px 0px;
     padding: 14px;
+    transition: 0.25s;
+}
+
+.btn-quemsou a:hover {
+    background-color: var(--branco);
+    color: var(--roxo);
 }
 
 
