@@ -23,6 +23,25 @@
     --fonte2: 'Mulish';
 }
 
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--preto);
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--roxo);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid var(--preto);
+    /* creates padding around scroll thumb */
+}
+
 body {
     display: flex;
     background-color: var(--cinza);
@@ -195,11 +214,11 @@ main {
     font-family: var(--fonte2);
     text-align: center;
     padding-top: 8px;
+    width: 900px;
 }
 
 .card {
     height: 426px;
-    width: 472px;
     border: 2.5px solid #3739FF;
     border-radius: 30px 0px;
     display: flex;
@@ -245,6 +264,35 @@ main {
     color: var(--branco);
     font-family: var(--fonte1);
     text-decoration: underline 3px;
+}
+
+
+/*SESSAO 3*/
+
+.mentorias {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.introducao h4 {
+    color: var(--branco);
+    font-family: var(--fonte1);
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.feed-cards {
+    display: flex;
+}
+
+.cabecalho-card p {
+    color: var(--branco);
+    font-family: var(--fonte2);
 }
 
 
