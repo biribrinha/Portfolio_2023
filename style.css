@@ -100,6 +100,9 @@ main {
 .apresentacao {
     background-color: var(--roxo);
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .apresentacao h1 {
@@ -110,7 +113,6 @@ main {
     color: var(--branco);
     text-align: center;
     width: 984px;
-    margin-top: 40px;
     margin-bottom: 40px;
 }
 
