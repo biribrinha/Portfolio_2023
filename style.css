@@ -149,7 +149,7 @@ main {
 }
 
 .resumo img {
-    width: 90vh;
+    width: 550px;
 }
 
 .info {
@@ -209,14 +209,6 @@ main {
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
-}
-
-.introducao {
-    padding-top: 70px;
-}
-
-.mentorias-p {
-    padding-bottom: 70px;
 }
 
 .introducao h2 {
