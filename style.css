@@ -296,7 +296,7 @@ main {
     flex-direction: column;
 }
 
-.introducao-mentoria{
+.introducao-mentoria {
     padding-bottom: 40px;
 }
 
@@ -309,7 +309,7 @@ main {
     text-align: center;
 }
 
-.introducao-mentoria p{
+.introducao-mentoria p {
     color: var(--branco);
     font-family: var(--fonte2);
     text-align: center;
@@ -424,6 +424,61 @@ main {
 }
 
 
+
+
+
+
+
+/* NOTEBOOK */
+
+@media (max-width: 1566px) {
+
+
+
+
+    /* SESSAO 1*/
+    .apresentacao h1{
+        font-size: 40px;
+        margin-bottom: 10px;
+
+    }
+
+    /* SESSAO 2*/
+    .introducao h2 {
+        font-size: 35px;
+    }
+    
+    .card {
+        height: 380px;
+    }
+    
+    .card img {
+        width: 216px;
+        height: 180.46px;
+    }
+
+    /* SESSAO 3*/
+
+    .introducao-mentoria h4 {
+        font-size: 35px;
+    }
+    .card_mentoria {
+        width: 590px;
+        height: 500px;
+    }
+
+    .card_mentoria img {
+        width: 134.06px;
+        height: 112px;
+        margin: 10px;
+    }
+
+    .card_mentoria p{
+        font-size: 15px;
+    }
+}
+
+
 /*MODAL*/
 
 /* .modal {
@@ -436,9 +491,9 @@ main {
     justify-content: center;
     align-items: center;
     z-index: 1000; */
-    /* depending on what z-index values exist in your page, in order for the modal layer to sit on top of other content */
-    /* enable scrolling if needed - although this is not really necessary since we are going take care of overflow in modal-content */
-    /* background-color: rgba(0, 0, 0, 0.8);
+/* depending on what z-index values exist in your page, in order for the modal layer to sit on top of other content */
+/* enable scrolling if needed - although this is not really necessary since we are going take care of overflow in modal-content */
+/* background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal.modal-show {
