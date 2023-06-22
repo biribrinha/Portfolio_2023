@@ -53,65 +53,11 @@ body {
 }
 
 
-/*HEADER*/
-
-.menu {
-    background-color: var(--preto);
-    height: 100vh;
-    width: 260px;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    z-index: 1;
-}
-
-.margem-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.logo {
-    height: 95px;
-    width: 95px;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 200px;
-}
-
-nav a {
-    display: flex;
-    text-decoration: none;
-    color: var(--branco);
-    font-family: var(--fonte2);
-}
-
-nav a:hover {
-    color: var(--amarelo);
-}
-
-.redes-sociais {
-    display: flex;
-    align-items: center;
-    width: 260px;
-    justify-content: space-around;
-}
-
-svg:hover path {
-    fill: var(--amarelo);
-}
-
 
 /*sessoes geral*/
 
 main {
     width: 100%;
-    margin-left: 260px;
 }
 
 .margin {
@@ -424,264 +370,131 @@ main {
 }
 
 
-.phone{
-    display: none;
-}
+/* fim carrosel*/
 
-@media screen and (max-width: 955px){
-
-    aside{
-        display: none;
-    }
-    .phone {
-        display: initial;
-    }
-
-    .navigation {
-        position: fixed;
-        width: 100%;
-        height: 70px;
-        background: var(--preto);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* border-radius: 10px; */
-        /* left: 205px; */
-        /* top: 0; */
-        bottom: 0;
-        font-family: var(--fonte2);
-    }
-
-    .navigation ul {
-        display: flex;
-        width: 350px;
-    }
-
-    .navigation ul li {
-        position: relative;
-        list-style: none;
-        width: 70px;
-        height: 70px;
-        z-index: 1;
-    }
-
-    .navigation ul li a {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        font-weight: 500;
-    }
-
-    .navigation ul li a .icon {
-        position: relative;
-        display: block;
-        line-height: 75px;
-        font-size: 1.5em;
-        text-align: center;
-        transition: 0.5s;
-        color: var(--branco);
-    }
-
-    .navigation ul li.active a .icon {
-        transform: translateY(-32px);
-    }
-
-    .navigation ul li a .text {
-        position: absolute;
-        color: var(--branco);
-        font-weight: 400;
-        font-size: 0.75em;
-        letter-spacing: 0.05em;
-        transition: 0.5s;
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    .navigation ul li.active a .text {
-        opacity: 1;
-        transform: translateY(10px);
-    }
-
-    .indicator {
-        position: absolute;
-        top: -50%;
-        width: 70px;
-        height: 70px;
-        background: var(--roxo);
-        border-radius: 50%;
-        border: 6px solid var(--clr);
-        transition: 0.5s;
-    }
-
-    .indicator::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: -22px;
-        width: 20px;
-        height: 20px;
-        background: transparent;
-        border-top-right-radius: 20px;
-        box-shadow: 1px -10px 0 0 var(--clr);
-    }
-
-    .indicator::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        right: -22px;
-        width: 20px;
-        height: 20px;
-        background: transparent;
-        border-top-left-radius: 20px;
-        box-shadow: -1px -10px 0 0 var(--clr);
-    }
-
-    /* transicao do indicador */
-    .navigation ul li:nth-child(1).active~.indicator {
-        transform: translateX(calc(70px * 0));
-    }
-
-    .navigation ul li:nth-child(2).active~.indicator {
-        transform: translateX(calc(70px * 1));
-    }
-
-    .navigation ul li:nth-child(3).active~.indicator {
-        transform: translateX(calc(70px * 2));
-    }
-
-    .navigation ul li:nth-child(4).active~.indicator {
-        transform: translateX(calc(70px * 3));
-    }
-
-    .navigation ul li:nth-child(5).active~.indicator {
-        transform: translateX(calc(70px * 4));
-    }
-}
-
-
-
-/* NOTEBOOK */
-
-@media (max-width: 1566px) {
-
-
-
-
-    /* SESSAO 1*/
-    .apresentacao h1{
-        font-size: 40px;
-        margin-bottom: 10px;
-
-    }
-
-    /* SESSAO 2*/
-    .introducao h2 {
-        font-size: 35px;
-    }
-    
-    .card {
-        height: 380px;
-    }
-    
-    .card img {
-        width: 216px;
-        height: 180.46px;
-    }
-
-    /* SESSAO 3*/
-
-    .introducao-mentoria h4 {
-        font-size: 35px;
-    }
-    .card_mentoria {
-        width: 590px;
-        height: 500px;
-    }
-
-    .card_mentoria img {
-        width: 134.06px;
-        height: 112px;
-        margin: 10px;
-    }
-
-    .card_mentoria p{
-        font-size: 15px;
-    }
-}
-
-
-/*MODAL*/
-
-/* .modal {
+/*MENU BAR*/
+.navigation {
     position: fixed;
-    left: 0;
-    top: 0;
     width: 100%;
-    height: 100%;
-    display: none;
+    height: 70px;
+    background: var(--preto);
+    display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; */
-/* depending on what z-index values exist in your page, in order for the modal layer to sit on top of other content */
-/* enable scrolling if needed - although this is not really necessary since we are going take care of overflow in modal-content */
-/* background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal.modal-show {
-    animation: fadeIn 0.1s ease-in-out forwards;
-}
-
-.modal.modal-hide {
-    animation: fadeOut 0.1s ease-in-out 0.1s forwards;
-}
-
-.modal-content {
-    position: relative;
-    background-color: var(--cinza);
-    color: var(--branco);
-    padding: 2rem;
-    border-radius: 0.25rem;
-    height: 50%;
-    width: 50%;
-}
-
-.modal.modal-show .modal-content {
-    animation: fadeInDown 0.3s ease-in-out forwards;
-}
-
-.modal.modal-hide .modal-content {
-    animation: fadeOutUp 0.2s ease-in-out forwards;
-}
-
-.modal-content h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-family: var(--fonte1);
-}
-
-.modal-content p {
-    margin: 1rem 0;
-    line-height: 1.5rem;
+    bottom: 0;
     font-family: var(--fonte2);
+}
+
+.navigation ul {
+    display: flex;
+    width: 350px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
     text-align: center;
+    font-weight: 500;
 }
 
-.fechar {
-    text-align: end;
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--branco);
 }
 
-.modal-close {
-    font-size: 6.75rem;
-    font-weight: bold;
-    cursor: pointer;
+.navigation ul li.active a .icon {
+    transform: translateY(-32px);
 }
 
-.modal-close:hover,
-.modal-close:focus {
-    color: var(--roxo);
-} */
+.navigation ul li a .text {
+    position: absolute;
+    color: var(--branco);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navigation ul li.active a .text {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator {
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: var(--roxo);
+    border-radius: 50%;
+    border: 6px solid var(--cinza);
+    transition: 0.5s;
+}
+
+.indicator::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 var(--clr);
+}
+
+.indicator::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 var(--clr);
+}
+
+/* transicao do indicador */
+.navigation ul li:nth-child(1).active~.indicator {
+    transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active~.indicator {
+    transform: translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active~.indicator {
+    transform: translateX(calc(70px * 2));
+}
+
+.navigation ul li:nth-child(4).active~.indicator {
+    transform: translateX(calc(70px * 3));
+}
+
+.navigation ul li:nth-child(5).active~.indicator {
+    transform: translateX(calc(70px * 4));
+}
+/*FIM MENU BAR*/
+
+
+
