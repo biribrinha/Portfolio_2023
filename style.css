@@ -53,7 +53,6 @@ body {
 }
 
 
-
 /*sessoes geral*/
 
 main {
@@ -71,7 +70,7 @@ main {
 /*SESSAO 1*/
 
 .apresentacao {
-    background-color: var(--roxo);
+    background-color: var(--branco);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -83,7 +82,7 @@ main {
     font-weight: 800;
     font-size: 45px;
     line-height: 60px;
-    color: var(--branco);
+    color: var(--roxo);
     text-align: center;
     width: 984px;
     margin-bottom: 40px;
@@ -91,11 +90,12 @@ main {
 
 .resumo {
     display: flex;
-    width: 984px;
+    justify-content: space-between;
+    width: 70%;
 }
 
 .resumo img {
-    width: 550px;
+    width: 100vh;
 }
 
 .info {
@@ -111,7 +111,7 @@ main {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: var(--branco);
+    color: var(--roxo);
     font-family: var(--fonte2);
     text-transform: uppercase;
 }
@@ -121,7 +121,7 @@ main {
     font-weight: 900;
     font-size: 20px;
     line-height: 27px;
-    color: var(--branco);
+    color: var(--roxo);
     font-family: var(--fonte2);
     margin-bottom: 13px;
 }
@@ -129,21 +129,21 @@ main {
 .btn-quemsou a {
     width: 195px;
     height: 60px;
-    color: var(--branco);
+    color: var(--roxo);
     font-family: var(--fonte2);
     font-weight: 300;
     font-size: 20px;
     line-height: 24px;
     text-decoration: none;
-    border: 1.5px solid #FFFFFF;
+    border: 1.5px solid var(--roxo);
     border-radius: 13px 0px;
     padding: 14px;
     transition: 0.25s;
 }
 
 .btn-quemsou a:hover {
-    background-color: var(--branco);
-    color: var(--roxo);
+    background-color: var(--roxo);
+    color: var(--branco);
 }
 
 
@@ -261,7 +261,6 @@ main {
     text-align: center;
     padding-top: 8px;
     width: 900px;
-
 }
 
 .feed-cards {
@@ -283,9 +282,7 @@ main {
     font-family: var(--fonte2);
     line-height: 25px;
     text-align: justify;
-
 }
-
 
 .card_mentoria {
     width: 650px;
@@ -334,7 +331,6 @@ main {
 }
 
 
-
 /*carrosel*/
 
 .carrosel-completo {
@@ -372,7 +368,9 @@ main {
 
 /* fim carrosel*/
 
+
 /*MENU BAR*/
+
 .navigation {
     position: fixed;
     width: 100%;
@@ -474,7 +472,9 @@ main {
     box-shadow: -1px -10px 0 0 var(--clr);
 }
 
+
 /* transicao do indicador */
+
 .navigation ul li:nth-child(1).active~.indicator {
     transform: translateX(calc(70px * 0));
 }
@@ -494,7 +494,6 @@ main {
 .navigation ul li:nth-child(5).active~.indicator {
     transform: translateX(calc(70px * 4));
 }
+
+
 /*FIM MENU BAR*/
-
-
-
